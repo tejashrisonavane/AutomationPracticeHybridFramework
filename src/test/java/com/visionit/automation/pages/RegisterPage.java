@@ -7,14 +7,14 @@ import org.openqa.selenium.WebDriver;
 
 import com.visionit.automation.base.BasePage;
 import com.visionit.automation.utils.ElementActions;
-import com.visionit.automation.variables.RegisterPageUserDetails;
+import com.visionit.automation.variables.RegisterPageDetails;
 
 public class RegisterPage extends BasePage{
 
-	private static final Logger logger = LogManager.getLogger(LandingPage.class);
+	private static final Logger logger = LogManager.getLogger(RegisterPage.class);
 
 	ElementActions elementActions;
-	RegisterPageUserDetails registerPageUserDetails;
+	RegisterPageDetails registerPageUserDetails;
 
 	// By Locators - Landing Page
 	private By SigninButtonElement = By.xpath("//div/a[contains(text(),'Sign in')]");
@@ -52,7 +52,7 @@ public class RegisterPage extends BasePage{
 	// Constructor of the page:
 	public RegisterPage(WebDriver driver) {
 		elementActions = new ElementActions(driver);
-		registerPageUserDetails = new RegisterPageUserDetails();
+		registerPageUserDetails = new RegisterPageDetails();
 	}
 
 	// Page Actions:
@@ -78,14 +78,14 @@ public class RegisterPage extends BasePage{
 		logger.info("Sent text for user first name as : " + newUserFirstName);
 		elementActions.doActionsSendKeys(userLastNameTextboxElement, newUserNameName);
 		logger.info("Sent text for user last name as : " + newUserNameName);
-		elementActions.doActionsSendKeys(userPasswordTextboxElement, RegisterPageUserDetails.userPassword);
-		logger.info("Sent text for user password as : " + RegisterPageUserDetails.userPassword);
-		elementActions.selectByValueFromDropDown(userDOBDayDropDownElement, RegisterPageUserDetails.DOBDayValue);
-		logger.info("Selected value from drop down Birth Day for user as : " + RegisterPageUserDetails.DOBDayValue);
-		elementActions.selectByValueFromDropDown(userDOBMonthDropDownElement, RegisterPageUserDetails.DOBMonthValue);
-		logger.info("Selected value from drop down Birth Month for user as : " + RegisterPageUserDetails.DOBMonthValue);
-		elementActions.selectByValueFromDropDown(userDOBYearDropDownElement, RegisterPageUserDetails.DOBYearValue);
-		logger.info("Selected value from drop down Birth Year for user as : " + RegisterPageUserDetails.DOBYearValue);
+		elementActions.doActionsSendKeys(userPasswordTextboxElement, RegisterPageDetails.userPassword);
+		logger.info("Sent text for user password as : " + RegisterPageDetails.userPassword);
+		elementActions.selectByValueFromDropDown(userDOBDayDropDownElement, RegisterPageDetails.DOBDayValue);
+		logger.info("Selected value from drop down Birth Day for user as : " + RegisterPageDetails.DOBDayValue);
+		elementActions.selectByValueFromDropDown(userDOBMonthDropDownElement, RegisterPageDetails.DOBMonthValue);
+		logger.info("Selected value from drop down Birth Month for user as : " + RegisterPageDetails.DOBMonthValue);
+		elementActions.selectByValueFromDropDown(userDOBYearDropDownElement, RegisterPageDetails.DOBYearValue);
+		logger.info("Selected value from drop down Birth Year for user as : " + RegisterPageDetails.DOBYearValue);
 		if(IsSignUpForNewsLetter) 
 		{
 			elementActions.doClick(signUpForNewsLetterCheckBoxElement);
@@ -97,26 +97,26 @@ public class RegisterPage extends BasePage{
 			logger.info("Clicked on special Offer Email RecCheck Box option");
 		}
 		
-		elementActions.doActionsSendKeys(AddressComanyNameTextBoxElement, RegisterPageUserDetails.AddressComanyName);
-		logger.info("Sending user Company address name as : " + RegisterPageUserDetails.AddressComanyName);
-		elementActions.doActionsSendKeys(AddressLine1TextBoxElement, RegisterPageUserDetails.AddressLine1Name);
-		logger.info("Sending user Company address line 1 as : " + RegisterPageUserDetails.AddressComanyName);
-		elementActions.doActionsSendKeys(AddressLine2TextBoxElement, RegisterPageUserDetails.AddressLine2Name);
-		logger.info("Sending user Company address line 2 as : " + RegisterPageUserDetails.AddressLine2Name);
-		elementActions.doActionsSendKeys(AddressCityTextBoxElement, RegisterPageUserDetails.AddressCity);
-		logger.info("Sending user city name as : " + RegisterPageUserDetails.AddressCity);
-		elementActions.selectByVisibleTextFromDropDown(AddressStateDropDownElement, RegisterPageUserDetails.AddressState);
-		logger.info("Selecting user state from drop down as : " + RegisterPageUserDetails.AddressState);
-		elementActions.doActionsSendKeys(AddressZipCodeTextBoxElement, RegisterPageUserDetails.AddressZipCode);
-		logger.info("Sending user postal zip code as : " + RegisterPageUserDetails.AddressZipCode);
-		elementActions.doActionsSendKeys(AddressAdditionalInfoTextBoxElement, RegisterPageUserDetails.AddressAdditionalInfo);
-		logger.info("Sending user addition info as : " + RegisterPageUserDetails.AddressAdditionalInfo);
-		elementActions.doActionsSendKeys(AddressHomePhoneTextBoxElement, RegisterPageUserDetails.AddressHomePhone);
-		logger.info("Sending user home phone no as : " + RegisterPageUserDetails.AddressHomePhone);
-		elementActions.doActionsSendKeys(AddressMobilePhoneTextBoxElement, RegisterPageUserDetails.AddressMobilePhone);
-		logger.info("Sending user mobile phone no as : " + RegisterPageUserDetails.AddressMobilePhone);
-		elementActions.doActionsSendKeys(AdddressAliasAddressTextBoxElement, RegisterPageUserDetails.AdddressAliasAddress);
-		logger.info("Sending user alias address as : " + RegisterPageUserDetails.AdddressAliasAddress);
+		elementActions.doActionsSendKeys(AddressComanyNameTextBoxElement, RegisterPageDetails.getAddresscomanyname());
+		logger.info("Sending user Company address name as : " + RegisterPageDetails.getAddresscomanyname());
+		elementActions.doActionsSendKeys(AddressLine1TextBoxElement, RegisterPageDetails.AddressLine1Name);
+		logger.info("Sending user Company address line 1 as : " + RegisterPageDetails.getAddresscomanyname());
+		elementActions.doActionsSendKeys(AddressLine2TextBoxElement, RegisterPageDetails.AddressLine2Name);
+		logger.info("Sending user Company address line 2 as : " + RegisterPageDetails.AddressLine2Name);
+		elementActions.doActionsSendKeys(AddressCityTextBoxElement, RegisterPageDetails.AddressCity);
+		logger.info("Sending user city name as : " + RegisterPageDetails.AddressCity);
+		elementActions.selectByVisibleTextFromDropDown(AddressStateDropDownElement, RegisterPageDetails.AddressState);
+		logger.info("Selecting user state from drop down as : " + RegisterPageDetails.AddressState);
+		elementActions.doActionsSendKeys(AddressZipCodeTextBoxElement, RegisterPageDetails.AddressZipCode);
+		logger.info("Sending user postal zip code as : " + RegisterPageDetails.AddressZipCode);
+		elementActions.doActionsSendKeys(AddressAdditionalInfoTextBoxElement, RegisterPageDetails.AddressAdditionalInfo);
+		logger.info("Sending user addition info as : " + RegisterPageDetails.AddressAdditionalInfo);
+		elementActions.doActionsSendKeys(AddressHomePhoneTextBoxElement, RegisterPageDetails.AddressHomePhone);
+		logger.info("Sending user home phone no as : " + RegisterPageDetails.AddressHomePhone);
+		elementActions.doActionsSendKeys(AddressMobilePhoneTextBoxElement, RegisterPageDetails.AddressMobilePhone);
+		logger.info("Sending user mobile phone no as : " + RegisterPageDetails.AddressMobilePhone);
+		elementActions.doActionsSendKeys(AdddressAliasAddressTextBoxElement, RegisterPageDetails.AdddressAliasAddress);
+		logger.info("Sending user alias address as : " + RegisterPageDetails.AdddressAliasAddress);
 		elementActions.doClick(registerFormButtonElement);
 		logger.info("Clicking on register button after filling all required data");
 		
@@ -137,9 +137,12 @@ public class RegisterPage extends BasePage{
 		}		
 	}
 
-	public boolean FadedTShirtEle(boolean b, boolean c) {
-		// TODO Auto-generated method stub
+	/*public boolean ChangeImageColour(boolean b, boolean c) {
+
 		return false;
+	}*/
+;
 	}
 
-	}
+	
+

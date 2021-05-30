@@ -14,7 +14,7 @@ public class RegisterPageTest extends BaseTest {
 	private static final Logger logger = LogManager.getLogger(RegisterPageTest.class);
 	
 	@Test
-	public void tc_08_verify_new_user_registration_with_newsletter_and_specialOffer_Subscribed() {
+	public void tc_0_verify_new_user_registration_with_newsletter_and_specialOffer_Subscribed() {
 		
 		logger.info("Test case started: tc_08_verify_new_user_registration_with_newsletter_and_specialOffer_Subscribed");
 		
@@ -25,7 +25,7 @@ public class RegisterPageTest extends BaseTest {
 	}
 	
 	@Test
-	public void tc_081_verify_new_user_registration_without_newsletter_and_specialOffer_Subscribed() {
+	public void tc_0_verify_new_user_registration_without_newsletter_and_specialOffer_Subscribed() {
 		
 		logger.info("Test case started: tc_081_verify_new_user_registration_without_newsletter_and_specialOffer_Subscribed");
 		

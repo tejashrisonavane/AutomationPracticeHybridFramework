@@ -14,6 +14,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.visionit.automation.base.BasePage;
+import com.visionit.automation.variables.EndToendDetails;
 
 /**
  * @author Sarang Holey
@@ -32,6 +33,7 @@ public class ElementActions {
 	Actions action;
 	Properties prop;
 	BasePage basePage;
+
 	//Utils utils;
 
 	/**
@@ -255,7 +257,7 @@ public class ElementActions {
 	 * @param locator
 	 * @return 
 	 */
-	public boolean waitForElementVisible(By locator) {
+	public  boolean waitForElementVisible(By locator) {
 		WebElement ele = getElement(locator);
 		wait.until(ExpectedConditions.visibilityOf(ele));
 		return false;

@@ -1,13 +1,6 @@
 package com.visionit.automation.utils;
 
 import java.util.ArrayList;
-
-/**
- * @author Sarang Holey
- *	This class having all the constant values
- *	which needed for validation throughout the project
- *	Ex. Page Titles
- */
 public class AppConstants {
 	
 	
@@ -27,6 +20,8 @@ public class AppConstants {
 	
 	public static final  String SIGNIN_PAGE_TITLE = "Login - My Store";
 	public static final String FRIEND_FEATURE_TEST = "click on Tshirt";
-
+    public static final String REGISTERED_PSSWRD = "123@Abc";
+	
+	public static final String REGISTERED_EMAIL_lId = "sonavane99@gmail.com";
 
 }
